@@ -1,0 +1,75 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+</head>
+
+<body> 
+  
+  <div class="header-blue">
+    <div id="overlay">
+
+      <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+        <div class="container"><img src="/assets/images/shoppe.jpg" height="60" alt="image"><button
+            class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle
+              navigation</span><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav">
+              <li class="nav-item" role="presentation"><a class="nav-link active" routerLink="/search">Link</a></li>
+              <!-- <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" data-toggle="dropdown"
+                  aria-expanded="false" href="#">Dropdown </a>
+                <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First
+                    Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a
+                    class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+              </li> -->
+            </ul>
+
+            <form class="form-inline mr-auto" target="_self">
+
+              <div id="container">
+                <button class="learn-more"  routerLink="/items-list">
+                  <span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text">Search</span>
+                </button>
+              </div>
+
+            </form>
+
+            <a *ngIf="loggedIn" class="btn btn-light action-button" (click)="logoutUser()" role="button"
+              href="#">Logout</a>
+            <span> <a *ngIf="!loggedIn" class="btn btn-light action-button" routerLink="/login">Log In</a></span><a
+              *ngIf="!loggedIn" class="btn btn-light action-button" routerLink="/register" role="button">Sign Up</a>
+
+          </div>
+        </div>
+      </nav>
+
+
+
+
+      <router-outlet></router-outlet>
+
+
+    </div>
+    
+  </div>
+
+  
+  
+
+</body>
+
+</html>

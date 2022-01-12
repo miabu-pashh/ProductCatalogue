@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body class="align">
+
+  <div class="grid align__item">
+
+    <div class="register">
+      <h2>Sign Up</h2>
+
+      <form (ngSubmit)="userRegister()" class="form">
+        <div class="form__field">
+          <input type="text" placeholder="Username" id="username" name="username" [(ngModel)]="user.username">
+        </div>
+
+        <div class="form__field">
+          <input type="email" placeholder="info@mailaddress.com" id="email" name="email" [(ngModel)]="user.email">
+        </div>
+
+        <div class="form__field">
+          <input type="password" placeholder="Password" id="password" name="password" [(ngModel)]="user.password">
+        </div>
+        <div class="form__field">
+          <input type="password" placeholder="Confirm Password" id="rol" name="rol" [(ngModel)]="user.rol">
+        </div>
+        <div class="form__field">
+          <input type="text" placeholder="Phone" id="phonenumber" name="phonenumber" [(ngModel)]="user.phonenumber">
+        </div>
+        <div class="form__field">
+          <input type="submit" value="Sign Up">
+        </div>
+
+      </form>
+      <p>Already have an accout? <a routerLink="/login">Log in</a></p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+  }
+  .container > div {
+    flex: 1; /*grow*/
+  }
+  #yourdiv1 {  
+    background: url("/assets/images/pregpic.png") no-repeat;
+    background-size: 100%;
+    opacity: 1;
+    filter: alpha(opacity=40);
+    max-width: 500px;
+  height: 500px;
+}
+#yourdiv2 {  
+  background: url("/assets/images/kids.jpg") no-repeat;
+  background-size: 100%;
+  opacity: 1;
+  filter: alpha(opacity=40);
+  max-width: 500px;
+height: 420px;
+}
+#yourdiv3 {  
+  background: url("/assets/images/women.jpg") no-repeat;
+  background-size: 100%;
+  opacity: 1;
+  filter: alpha(opacity=40);
+  max-width: 500px;
+height: 420px;
+}

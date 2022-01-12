@@ -1,0 +1,102 @@
+<button class="button1 mr-5" routerLink='/items-list'>Back</button>
+<div *ngFor="let item of delivery1">
+  <h2 align="center">The product will be delivered to your location {{item.city}} city of  pincode {{item.pincode}}  in {{item.deliveryTime}}</h2>
+</div>
+<div class="container"  *ngFor="let item of collections">
+  <div class="images">
+    <!-- <img src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg" /> -->
+    <img src="{{item.image}}" class="image">
+  </div>
+  <div class="slideshow-buttons">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+  </div>
+  <p class="pick">choose size</p>
+  <div class="sizes">
+    <div class="size">5</div>
+    <div class="size">6</div>
+    <div class="size">7</div>
+    <div class="size">8</div>
+    <div class="size">9</div>
+    <div class="size">10</div>
+    <div class="size">11</div>
+    <div class="size">12</div>
+  </div>
+  <div class="product">
+    <p>{{item.sDiscription}}</p>
+    <h1><b>{{item.name}}</b></h1>
+    <h5>⭐️⭐️⭐️⭐️⭐️</h5>
+    <br>
+    <h2>₹ {{item.price}}</h2>
+    <p class="desc">{{item.ldiscription}}</p>
+
+    
+
+    <p class="desc">
+
+     <b>IN STOCK-ONLY A FEW LEFT</b>
+    </p>
+    <span>
+    <input type="text" id="pinc" maxlength="8" size="7.5" name="pincode"
+    [(ngModel)]="pincode" (ngModelChange)="findDeliveryById()">
+    <button id="pin" (click)="findDeliveryById()">Pincode</button>
+  </span>
+    <br>
+    <br>
+    <div class="buttons">
+      <button class="add">Add to Cart</button>
+      <button class="like"><span>♥</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+   $(".size").on('click', function(){
+    $(this).toggleClass('focus').siblings().removeClass('focus');
+ })
+
+ 
+</script>
+
+<br>
+<br>
+<!-- <div class="detailscard" *ngFor="let item of delivery1">
+  <div class="container">
+    <p class="categoryText">this is pincode {{item.pincode}}</p>
+    <h2 class="brandText">this is country {{item.country}}</h2>
+    <p class="pricetext">{{item.city}}</p>
+    <p class="offerText">{{item.deliveryTime}}</p>
+    <h2>The product will be delivered to the pincode {{item.pincode}}  and city {{item.city}} in {{item.deliveryTime}} business days</h2>
+    
+  </div>
+</div> -->
+
+
+<!-- <div class="productHolder" >
+  <div class="card" *ngFor="let item of delivery1">
+      <div class="cardText">
+          <p>this is pincode</p>
+          <p class="categoryText">this is pincode {{item.pincode}}</p>
+          <h2 class="brandText">this is country {{item.country}}</h2>
+          <h5>⭐️⭐️⭐️⭐️⭐️</h5>
+          <p class="pricetext">₹ {{item.city}}</p>
+          <p class="offerText">{{item.deliveryTime}}</p>
+      </div>
+  </div>
+</div> -->
+
+<!-- <div class="productHolder"  >
+    <div class="card" *ngFor="let item of collections">
+        <img src="{{item.image}}" alt="{{item.image}}" class="border-radius">
+        <div class="cardText">
+            <p class="categoryText">{{item.name}}</p>
+            <h2 class="brandText">{{item.sDiscription}}</h2>
+            <h5>⭐️⭐️⭐️⭐️⭐️</h5>
+            <p class="pricetext">₹ {{item.price}}</p>
+            <p class="offerText">{{item.ldiscription}}</p>
+        </div>
+    </div>
+</div>
+</body> -->

@@ -1,0 +1,29 @@
+<p>search works!</p>
+<div class="conatiner">
+    <div class="row">
+        <div class="col-lg-9 col-sm-12 col-xs-12">
+            <input type="text" placeholder="enter the porduct" class="form-control" name="itemname"
+                [(ngModel)]="itemname">
+        </div>
+        <div class="col-lg-3 col-sm-12 col-xs-12">
+
+            <button type="button" class="btn btn-info" (click)="findByName()">search</button>
+        </div>
+    </div>
+    
+    <div class="productHolder">
+        <div class="card" *ngFor="let item of collections">
+            <img src="{{item.image}}" alt="{{item.image}}" class="border-radius">
+            <div class="cardText">
+                <p class="categoryText">{{item.name}}</p>
+                <h2 class="brandText">{{item.sDiscription}}</h2>
+                <h5>⭐️⭐️⭐️⭐️⭐️</h5>
+                <p class="pricetext">₹ {{item.price}}</p>
+                <p class="offerText">{{item.ldiscription}}</p>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
